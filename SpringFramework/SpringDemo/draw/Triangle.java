@@ -4,7 +4,7 @@
 package draw;
 
 /**
- * @author RS067558
+ * @author RS
  *
  */
 public class Triangle 
