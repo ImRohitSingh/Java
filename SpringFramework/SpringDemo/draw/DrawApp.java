@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 //import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 /**
- * @author RS067558
+ * @author RS
  *
  */
 public class DrawApp 
