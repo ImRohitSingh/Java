@@ -2,19 +2,25 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
-	<bean id="triangle" class="refer.Triangle">
-		<property name="pointA" ref="point1"/>
-		<property name="pointB" ref="point2"/>
+	<bean id="triangle" class="refer.Triangle" >
+		<property name="pointA" ref="origin">
+			<!-- will throw an exception if 'point1' is not found; 'ref' does not do so -->
+			<!--  <idref="origin"/> --> 
+		</property>
+		
+		<property name="pointB">
+			<!--  inner bean -->
+			<bean class="refer.Point">
+				<property name="x" value="20"/>
+				<property name="y" value="0"/>
+			</bean>	
+		</property>
+		
 		<property name="pointC" ref="point3"/> 
 	</bean>
 	
-	<bean id="point1" class="refer.Point">
+	<bean id="origin" class="refer.Point">
 		<property name="x" value="0"/>
-		<property name="y" value="0"/>
-	</bean>
-	
-	<bean id="point2" class="refer.Point">
-		<property name="x" value="20"/>
 		<property name="y" value="0"/>
 	</bean>
 	
@@ -23,4 +29,6 @@
 		<property name="y" value="20"/>
 	</bean>
 	
+	<alias name="triangle" alias="triangle-alias"/> <!--  an alias for the triangle bean -->
+ 	
 </beans>
