@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="triangleType" class="draw.Triangle">
+		<!--  for constructor injection -->
+		<constructor-arg type = "java.lang.String" value = "Equilateral" /> <!--  one parameter as a string -->
+	</bean>
+	<bean id="triangleHeight" class="draw.Triangle">
+		<!--  for constructor injection -->
+		<constructor-arg type = "int" value = "15" /> <!--  one parameter as a integer -->
+	</bean>
+	<bean id="triangle" class="draw.Triangle">
+		<!--  for constructor injection -->
+		<constructor-arg index = "0" value = "Isosceles" /> <!--  first parameter -->
+		<constructor-arg index = "1" value = "10" /> <!--  second parameter -->
+	</bean>
+</beans>
