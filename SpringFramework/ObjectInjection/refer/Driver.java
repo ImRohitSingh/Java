@@ -14,7 +14,7 @@ public class Driver
 		
 		/* When using ClassPathXmlApplicationContext put the .xml file inside the src folder:*/
 		ApplicationContext  context =  new ClassPathXmlApplicationContext("Spring.xml");
-		Triangle triangle = (Triangle) context.getBean("triangle");
+		Triangle triangle = (Triangle) context.getBean("triangle-alias");
 		triangle.draw();
 
 	}
