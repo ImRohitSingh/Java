@@ -1,5 +1,5 @@
 /*
-	Problem Statement: Given a sorted array and a 'key'. Find a pair of indexes, if any, from the array whose values sums
+	Problem Statement: Given a sorted array and a 'key'. Find a pair of index, if any, from the array whose values sums
 	up to the 'key' value. You are to find only the first pair of match.
 */
 package com.rohit.searches;
