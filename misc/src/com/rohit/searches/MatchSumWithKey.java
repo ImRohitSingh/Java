@@ -9,7 +9,7 @@ import java.util.List;
 
 public class MatchSumWithKey {
 	
-	private static List<Integer> indexes = new ArrayList();
+	private static List<Integer> indexes = new ArrayList<>();
 	
 	public static void main(String[] args) {
 		
