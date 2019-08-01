@@ -1,3 +1,8 @@
+/*
+	Problem Statement: Given any array and a 'target'. Find a pair of index, if any, from the array whose values sums
+	up to the 'target' value. You are to find only and exactly the first pair of match. Consider that the array has no
+	duplicate elements.
+*/
 package com.rohit.searches;
 
 import java.util.ArrayList;
