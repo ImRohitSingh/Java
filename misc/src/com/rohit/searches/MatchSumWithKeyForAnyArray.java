@@ -19,7 +19,7 @@ public class MatchSumWithKeyForAnyArray {
 		int[] array = {1,2,3,4,5};
 		int key = 6;
 
-		indexes = new MatchSumWithKey2().findIndexes(array,key);
+		indexes = new MatchSumWithKeyForAnyArray().findIndexes(array,key);
 		
 		if(indexes.isEmpty()) {
 			System.out.println("No matched indexes...");
