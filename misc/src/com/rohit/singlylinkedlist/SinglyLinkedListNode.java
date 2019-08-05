@@ -3,6 +3,7 @@ package com.rohit.singlylinkedlist;
 public class SinglyLinkedListNode<T> {
 
 	private T info;
+	
 	private SinglyLinkedListNode<T> next;
 	
 	public T getInfo() {
