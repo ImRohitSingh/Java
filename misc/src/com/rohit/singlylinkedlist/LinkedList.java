@@ -5,6 +5,7 @@ import com.rohit.util.List;
 public class LinkedList<T> implements List<T> {
 
 	private SinglyLinkedListNode<T> start = new SinglyLinkedListNode<>();
+	
 	private SinglyLinkedListNode<T> end = new SinglyLinkedListNode<>();
 	
 	public LinkedList() {
@@ -13,11 +14,21 @@ public class LinkedList<T> implements List<T> {
 	}
 	
 	@Override
+	public boolean isEmpty() {
+		if(start.getNext() == null && end.getNext() == null) {
+			return true;
+		} else {
+			return false;
+		}
+		
+	}
+	
+	@Override
 	public void add(T info) {
 		SinglyLinkedListNode<T> createNode = new SinglyLinkedListNode<>();
 		createNode.setInfo(info);
 		createNode.setNext(null);
-		if(start.getNext() == null && end.getNext() == null) {
+		if(isEmpty()) {
 			start.setNext(createNode);
 		} else {
 			end.getNext().setNext(createNode);
@@ -28,7 +39,7 @@ public class LinkedList<T> implements List<T> {
 	@Override
 	public String toString() {
 		StringBuilder list = new StringBuilder();
-		if(start.getNext() == null && end.getNext() == null) {
+		if(isEmpty()) {
 			list.append("Empty List");
 		} else {
 			SinglyLinkedListNode<T> traverseNode = new SinglyLinkedListNode<>();
